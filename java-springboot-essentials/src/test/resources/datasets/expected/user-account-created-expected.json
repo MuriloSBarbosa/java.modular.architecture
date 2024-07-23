@@ -1,0 +1,10 @@
+{
+  "user_account": [
+    {
+      "id": "{{uuid_regex}}",
+      "name": "Murilo Barbosa",
+      "email": "murilo.barbosa@email.com",
+      "password": "123"
+    }
+  ]
+}

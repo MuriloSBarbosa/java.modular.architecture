@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "id": "f47b1f1f-7e1c-4f1d-9b0f-0f1f1f1f1f1f",
+      "name": "Murilo Barbosa",
+      "email": "murilo.barbosa@email.com"
+    }
+  ],
+  "page": 0,
+  "size": 10,
+  "totalElements": 1,
+  "totalPages": 1
+}
