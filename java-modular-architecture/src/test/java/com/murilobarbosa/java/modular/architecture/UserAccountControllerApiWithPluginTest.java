@@ -42,7 +42,6 @@ class UserAccountControllerApiWithPluginTest {
     class CreateUserAccount {
 
         @Test
-@InsertSql(value = "datasets/input/user-accounts-input.json")
         @DisplayName("1.1 Should create a new user account")
         void shouldCreateNewUserAccount() {
             var response = testRestTemplate
@@ -57,8 +56,9 @@ class UserAccountControllerApiWithPluginTest {
         }
 
         @Test
-        @DisplayName("1.2 Should create a new user account")
-        void shouldCreateNewUserAccount2() {
+        @InsertSql(value = "datasets/input/user-accounts-input.json")
+        @DisplayName("1.2 Should throw exception when trying to create a user account with an email that already exists")
+        void shouldThrowExceptionWhenTryingToCreateUserAccountWithEmailThatAlreadyExists() {
             var response = testRestTemplate
                   .exchange(getPath(null),
                         HttpMethod.POST,
@@ -66,8 +66,7 @@ class UserAccountControllerApiWithPluginTest {
                         new ParameterizedTypeReference<UserAccountResponseDto>() {
                         });
 
-            assertNotNull(response.getBody());
-            assertEquals(HttpStatus.CREATED, response.getStatusCode());
+            assertEquals(HttpStatus.CONFLICT, response.getStatusCode());
         }
 
     }
