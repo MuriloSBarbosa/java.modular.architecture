@@ -1,10 +1,10 @@
 services:
   database:
     image: postgres:13
-    container_name: springboot-essentials-db
+    container_name: spring-boot-modular-db
     environment:
       POSTGRES_PASSWORD: password
       POSTGRES_USER: postgres
-      POSTGRES_DB: spring_boot_essentials
+      POSTGRES_DB: spring_boot_modular
     ports:
       - 5432:5432

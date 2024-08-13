@@ -1,4 +1,4 @@
-# Java Spring Boot Essentials
+# Java Modular Architecture with Spring Boot
 
 This repository contains the implementation of various structures and concepts to build a Rest API using Java Spring Boot.
 
